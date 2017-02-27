@@ -1,0 +1,16 @@
+<h1>Manage Bookmarks</h1>
+
+<table class="table table-striped">
+	<tr *ngFor="let bookmark of bookmarks">
+		<td>
+			{{ bookmark.title }}
+		</td>
+		<td>
+			<a [href]="bookmark.url" target="_blank">{{ bookmark.url }}</a>
+		</td>
+		<td>
+			<button class="btn btn-primary" (click)="onEdit(bookmark)">Edit</button>
+			<button class="btn btn-danger" (click)="notifyParentForDelete(bookmark)">Delete</button>
+		</td>
+	</tr>
+</table>

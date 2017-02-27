@@ -1,0 +1,7 @@
+<h3>Currenty Converter Section goes below.</h3>
+Convert: <input type="number" [(ngModel)]="baseAmount"
+	[class.error] = "isBaseAmountInvalid()">
+	<strong> 
+		<currency-select (onCurrencyChange)="baseCurrency = $event" [(selected)]="baseCurrency"></currency-select> = {{ targetAmountValue | fixedDecimal }} 
+		<currency-select (onCurrencyChange)="targetCurrency = $event" [(selected)]="targetCurrency"></currency-select>
+	</strong>

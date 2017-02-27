@@ -1,0 +1,13 @@
+<form (ngSubmit)="onSubmit(signupForm)" novalidate>
+	<fieldset>
+    	<legend>Registration Form</legend>
+		<div class="form-group">
+			<label>Email</label>
+			<input type="text" class="form-control" [(myModel)]="email">
+			<!--<p *ngIf="inputEmail.touched && inputEmail.invalid && inputEmail.errors.required" class="alert alert-danger">Please enter email</p>
+			<p *ngIf="inputEmail.touched && inputEmail.invalid && inputEmail.errors.pattern" class="alert alert-danger">Please enter email with pattern {{inputEmail.errors.pattern.requiredPattern}}</p>-->
+		</div>
+		<button type="submit" class="btn btn-primary">Sign Up</button>
+	</fieldset>
+</form>
+<pre>email = {{ email }}</pre>
